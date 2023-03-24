@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
+
 :root {
   --color-accent: #007bff;
   --color-background: #f0f0f0;
@@ -13,8 +15,10 @@
 }
 
 html {
+  font-size: 100%;
   font-family: "Roboto", sans-serif;
   height: 100%;
+  width: 100%;
 }
 
 a {
@@ -29,6 +33,7 @@ body {
   background-color: var(--color-background);
   width: 100%;
   height: 100%;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 header {
@@ -39,7 +44,7 @@ header {
 
 header h1 {
   font-size: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 header p {
@@ -49,44 +54,58 @@ header p {
 
 main {
   max-width: 1920px;
-  padding: 2rem;
+  width: 100%;
+  height: 65%;
+  margin: 0 auto;
 }
 
 #topic-container {
-  display: block;
-  margin: 0 auto;
-  font-size: 6rem;
-  font-weight: 500;
-  text-align: center;
-  color: var(--color-text);
-  background-color: red;
-  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
-@media screen (min-width: 443px) {
-  #topic-container p {
+#topic {
+  text-align: center;
+  font-size: 6rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  #topic {
     font-size: 3rem;
+  }
+  main {
+    max-width: 1920px;
+    width: 100%;
+    height: 50%;
+    margin: 0 auto;
+    padding: 1rem;
   }
 }
 
 #next-button {
-  background-color: var(--color-accent);
-  border: none;
-  border-radius: 5px;
+  background-color: #f64040;
+  font-size: 1.2rem;
   color: #fff;
   cursor: pointer;
   display: block;
   margin: 0 auto;
-  margin-bottom: 3rem;
-  padding: 1rem 2rem;
-  transition: background-color 0.3s ease-in-out;
-  width: 300px;
-  position: fixed;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-bottom: 4rem;
+  transition: all 0.3s;
+  border-radius: 50%;
+  line-height: 100px;
+  width: 200px;
+  height: 200px;
+  padding: 0;
+  -webkit-box-shadow: 0 10px 0 #333;
+  box-shadow: 0 6px 0 #333;
 }
 
-#next-button:hover {
-  background-color: var(--color-accent);
+#next-button:active {
+  -webkit-transform: translate(0, 0px);
+  transform: translate(0, 3px);
+  -webkit-box-shadow: 0 2px 0 #333;
+  box-shadow: 0 2px 0 #333;
 }
