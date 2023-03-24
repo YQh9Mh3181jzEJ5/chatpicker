@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
 
-:root {
-  --color-accent: #007bff;
-  --color-background: #f0f0f0;
-  --color-text: #333333;
-}
 
 *,
 *::before,
@@ -15,8 +10,9 @@
 }
 
 html {
-  font-size: 100%;
-  font-family: "Roboto", sans-serif;
+
+  font-size: var(--font-size-root);
+  font-family: 'Noto Sans JP', sans-serif;
   height: 100%;
   width: 100%;
 }
@@ -73,14 +69,15 @@ main {
 }
 
 @media (max-width: 767px) {
+  header {
+    margin: 1rem 0;
+  }
   #topic {
     font-size: 3rem;
   }
   main {
-    max-width: 1920px;
     width: 100%;
-    height: 50%;
-    margin: 0 auto;
+    height: 55%;
     padding: 1rem;
   }
 }
@@ -95,7 +92,7 @@ main {
   margin-bottom: 4rem;
   transition: all 0.3s;
   border-radius: 50%;
-  line-height: 100px;
+  line-height: 1;
   width: 200px;
   height: 200px;
   padding: 0;
