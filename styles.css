@@ -98,6 +98,7 @@ main {
   padding: 0;
   -webkit-box-shadow: 0 10px 0 #333;
   box-shadow: 0 6px 0 #333;
+  touch-action: manipulation;
 }
 
 #next-button:active {
